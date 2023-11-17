@@ -19,7 +19,10 @@ public class Principal3 {
         String moeda = JOptionPane.showInputDialog("Entre com a moeda:");
         double r1 = Double.parseDouble(real);
        
+        c1.setCAMBIODOLAR(7);
+        
         double res = c1.converter(r1, moeda);
         JOptionPane.showMessageDialog(null, res);
+        JOptionPane.showMessageDialog(null, c1.getCAMBIODOLAR());
     }
 }

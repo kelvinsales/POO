@@ -11,8 +11,8 @@ package modelo;
 public class Conversor {
     // ATRIBUTOS
     private double quantReal;
-    private double cambioDolar = 5;
-    private double cambioEuro = 6;
+    private double CAMBIODOLAR = 5;
+    private double CAMBIOEURO = 6;
     private double valor;
     // CONSTRUTOR
     public Conversor(){    }
@@ -22,12 +22,26 @@ public class Conversor {
         quantReal = r;
         switch (moeda){
             case "dolar":
-                valor = quantReal*cambioDolar;
+                valor = quantReal*getCAMBIODOLAR();
                 break;
             case "euro":
-                valor = quantReal*cambioEuro;
+                valor = quantReal*getCAMBIODOLAR();
                 break;
         }
         return valor;
+    }
+
+    /**
+     * @return the CAMBIODOLAR
+     */
+    public double getCAMBIODOLAR() {
+        return CAMBIODOLAR;
+    }
+
+    /**
+     * @param CAMBIODOLAR the CAMBIODOLAR to set
+     */
+    public void setCAMBIODOLAR(double CAMBIODOLAR) {
+        this.CAMBIODOLAR = CAMBIODOLAR;
     }
 }
